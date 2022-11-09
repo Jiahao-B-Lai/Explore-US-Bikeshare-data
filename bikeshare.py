@@ -1,3 +1,8 @@
+# Author: Jiahao Lai
+# Start Date: Oct 29 2022
+# End Date: Nov 02 2022
+# Credit: Udacity
+
 import time
 import pandas as pd
 import numpy as np
@@ -216,11 +221,13 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
 
+        # Since washington dataset has no columns of gender and year, we separately deal with it
         if city != 'washington':
             user_stats_with_gender_and_year(df)
         else:
             user_stats_without(df)
-
+            
+        # Ask user if want to see raw data (5 lines per time)
         raw_data(df)
         restart = input('\nWould you like to restart? Enter yes or no.\n').lower()
         if restart.lower() != 'yes':
