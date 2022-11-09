@@ -108,7 +108,7 @@ def time_stats(df):
     print(f'the most commonly start hour is : {top_hour}')
 
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    print("\nThis took %s seconds." % round((time.time() - start_time),2))
     print('-'*40)
 
 
@@ -129,7 +129,7 @@ def station_stats(df):
     top_pair = df.groupby(['Start Station', 'End Station']).size().idxmax()
     print(f'the most frequent combination of start station and end station is: from {top_pair[0]} to {top_pair[1]}')
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    print("\nThis took %s seconds." % round((time.time() - start_time),2))
     print('-'*40)
 
 
@@ -145,9 +145,9 @@ def trip_duration_stats(df):
 
     # display mean travel time
     time_mean = df['Trip Duration'].mean()
-    print(f'the mean travel time is : {time_mean}')
+    print(f'the mean travel time is : {round(time_mean,2)}')
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    print("\nThis took %s seconds." % round((time.time() - start_time),2))
     print('-'*40)
 
 
@@ -177,7 +177,7 @@ def user_stats_with_gender_and_year(df):
     print(f'the most recent year of birth is : {int(most_recent)}')
     print(f'the most common year of birth is : {int(top_year)}')
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    print("\nThis took %s seconds." % round((time.time() - start_time),2))
     print('-'*40)
 
 # for washington data:
@@ -195,7 +195,7 @@ def user_stats_without(df):
     print()
     print('Sorry, Washington currently has no data for user\'s gender and birth year.')
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    print("\nThis took %s seconds." % round((time.time() - start_time),2))
     print('-'*40)
 
 def raw_data(df):
@@ -226,7 +226,7 @@ def main():
             user_stats_with_gender_and_year(df)
         else:
             user_stats_without(df)
-            
+
         # Ask user if want to see raw data (5 lines per time)
         raw_data(df)
         restart = input('\nWould you like to restart? Enter yes or no.\n').lower()
