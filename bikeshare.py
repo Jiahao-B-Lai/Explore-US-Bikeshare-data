@@ -203,8 +203,8 @@ def raw_data(df):
     print('Would you like to view individual trip data? Type \'yes\' or \'no\'.')
     choice = input().lower()
 
-    while choice not in ['yes','no']:
-        choice = input('Please enter yes or no').lower()
+    while choice != 'yes' and choice != 'no':
+        choice = input('Please enter yes or no\n').lower()
 
     i = 0
     while choice != 'no':
@@ -213,6 +213,8 @@ def raw_data(df):
         i = i+5
         print('Would you like to view individual trip data? Type \'yes\' or \'no\'.')
         choice = input().lower()
+        while choice != 'yes' and choice != 'no':
+            choice = input('Please enter yes or no\n').lower()
 
 def main():
 
@@ -235,7 +237,7 @@ def main():
         restart = input('\nWould you like to restart? Enter yes or no.\n').lower()
         # check if it is a valid input:
         while restart != 'yes' and restart != 'no':
-            restart = input('Please enter yes or no').lower()
+            restart = input('Please enter yes or no \n').lower()
 
         if restart != 'yes':
             break
