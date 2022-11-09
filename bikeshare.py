@@ -141,11 +141,11 @@ def trip_duration_stats(df):
 
     # display total travel time
     total_time = df['Trip Duration'].sum()
-    print(f'total travel time is : {total_time}')
+    print(f'total travel time is : {total_time} s')
 
     # display mean travel time
     time_mean = df['Trip Duration'].mean()
-    print(f'the mean travel time is : {round(time_mean,2)}')
+    print(f'the mean travel time is : {round(time_mean,2)} s')
 
     print("\nThis took %s seconds." % round((time.time() - start_time),2))
     print('-'*40)
@@ -203,6 +203,9 @@ def raw_data(df):
     print('Would you like to view individual trip data? Type \'yes\' or \'no\'.')
     choice = input().lower()
 
+    while choice not in ['yes','no']:
+        choice = input('Please enter yes or no').lower()
+
     i = 0
     while choice != 'no':
         for i in range(i,i+5):
@@ -230,7 +233,11 @@ def main():
         # Ask user if want to see raw data (5 lines per time)
         raw_data(df)
         restart = input('\nWould you like to restart? Enter yes or no.\n').lower()
-        if restart.lower() != 'yes':
+        # check if it is a valid input:
+        while restart != 'yes' and restart != 'no':
+            restart = input('Please enter yes or no').lower()
+
+        if restart != 'yes':
             break
 
 if __name__ == "__main__":
