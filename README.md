@@ -1,13 +1,11 @@
-
-### Date created
-Create time: Oct 29 2022
-
-Finish time: Nov 02 2022
-
-### Project name:
+# Project name:
 Explore US Bikeshare Data
 
-### Description
+## Date created
+* Create time: Oct 29 2022
+* Finish time  :   Nov 02 2022
+
+## Description
 Over the past decade, bicycle-sharing systems have been growing in number and popularity in cities across the world. Bicycle-sharing systems allow users to rent bicycles on a very short-term basis for a price. This allows people to borrow a bike from point A and return it at point B, though they can also return it to the same location if they'd like to just go for a ride. Regardless, each bike can serve several users per day.
 
 Thanks to the rise in information technologies, it is easy for a user of the system to access a dock within the system to unlock or return bicycles. These technologies also provide a wealth of data that can be used to explore how these bike-sharing systems are used.
@@ -16,7 +14,7 @@ In this project, I will use data provided by Motivate, a bike share system provi
 
 
 
-### Files used
+## Files used
 #### Dataset Files:
 * chicago.csv
 * new_york_city.csv
@@ -25,7 +23,7 @@ In this project, I will use data provided by Motivate, a bike share system provi
 #### Code Files:
 * bikeshare.py
 
-### The Datasets
+## Datasets
 Randomly selected data for the first six months of 2017 are provided for all three cities. All three of the data files contain the same core six (6) columns:
 
 * Start Time (e.g., 2017-01-01 00:07:57)
@@ -42,7 +40,7 @@ The Chicago and New York City files also have the following two columns:
 
 ![Chicago&NYC](https://video.udacity-data.com/topher/2018/March/5aa771dc_nyc-data/nyc-data.png)
 
-### Statistics Computed
+## Statistics Computed
 You will learn about bike share use in Chicago, New York City, and Washington by computing a variety of descriptive statistics. In this project, you'll write code to provide the following information:
 
 1. Popular times of travel (i.e., occurs most often in the start time)
@@ -65,7 +63,7 @@ You will learn about bike share use in Chicago, New York City, and Washington by
 + counts of each gender (only available for NYC and Chicago)
 + earliest, most recent, most common year of birth (only available for NYC and Chicago)
 
-### An Interactive Experience
+## Interactive Experience
 The bikeshare.py file is set up as a script that takes in raw input to create an interactive experience in the terminal that answers questions about the dataset. The experience is interactive because depending on a user's input, the answers to the questions on the previous page will change! There are four questions that will change the answers:
 
 * Would you like to see data for Chicago, New York, or Washington?
@@ -75,5 +73,5 @@ The bikeshare.py file is set up as a script that takes in raw input to create an
 
 The answers to the questions above will determine the city and timeframe on which you'll do data analysis. After filtering the dataset, users will see the statistical result of the data, and choose to start again or exit.
 
-### Credits
+## Credits
 This project is directed by Udacity nanodegree: programming for data science with python
